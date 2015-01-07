@@ -11,14 +11,14 @@
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <link rel="shortcut icon" href="{Favicon}">
-    <link rel="alternate" type="application/rss+xml" href="{RSS}">{block:Description}
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>{block:Description}
     <meta name="description" content="{MetaDescription}" />{/block:Description}
 
     <!--Custom google webfonts -->
     <link href='http://fonts.googleapis.com/css?family={text:Google Web Font name}' rel='stylesheet' type='text/css'>
     <!--
-    	<link rel="stylesheet" href="your-external-stylesheet-here-if-you-wish" type="text/css" media="all">
-    	Upload at http://www.tumblr.com/themes/upload_static_file
+    	
     -->
 
     <style type="text/css">
@@ -70,7 +70,8 @@
 </head>
 
 <body>
-
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
     <header>
         <h1>{Title}</h1>
         {block:Description}
