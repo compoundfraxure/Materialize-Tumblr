@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        
+        {block:Description}
+            <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+        
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!--User's Customization Options-->
+        
+        <!--Color Choice-->
+        <meta name="select:Primary Color" content="" title="Default">
+        <meta name="select:Primary Color" content="red" title="Red">
+        <meta name="select:Primary Color" content="pink" title="Pink">
+        <meta name="select:Primary Color" content="purple" title="Purple">
+        <meta name="select:Primary Color" content="deep-purple" title="Deep Purple">
+        <meta name="select:Primary Color" content="indigo" title="Indigo">
+        <meta name="select:Primary Color" content="blue" title="Blue">
+        <meta name="select:Primary Color" content="light-blue" title="Light Blue">
+        <meta name="select:Primary Color" content="cyan" title="Cyan">
+        <meta name="select:Primary Color" content="teal" title="Teal">
+        <meta name="select:Primary Color" content="green" title="Green">
+        <meta name="select:Primary Color" content="light-green" title="Light Green">
+        <meta name="select:Primary Color" content="lime" title="Lime">
+        <meta name="select:Primary Color" content="yellow" title="Yellow">
+        <meta name="select:Primary Color" content="amber" title="Amber">
+        <meta name="select:Primary Color" content="orange" title="Orange">
+        <meta name="select:Primary Color" content="deep-orange" title="Deep Orange">
+        <meta name="select:Primary Color" content="brown" title="Brown">
+        <meta name="select:Primary Color" content="grey" title="Gray">
+        <meta name="select:Primary Color" content="blue-grey" title="Blue-Gray">
+        <meta name="select:Primary Color" content="black" title="Black">
+        <meta name="select:Primary Color" content="white" title="White">
+        <meta name="select:Primary Color" content="transparent" title="Transparent">
+        
+        <!--Color Variation-->
+        <meta name="select:Primary Color Variation" content="" title="Default">
+        <meta name="select:Primary Color Variation" content="lighten-1" title="Lighter 1">
+        <meta name="select:Primary Color Variation" content="lighten-2" title="Lighter 2">
+        <meta name="select:Primary Color Variation" content="lighten-3" title="Lighter 3">
+        <meta name="select:Primary Color Variation" content="lighten-4" title="Lighter 4">
+        <meta name="select:Primary Color Variation" content="lighten-5" title="Lighter 5">
+        <meta name="select:Primary Color Variation" content="darken-1" title="Darker 1">
+        <meta name="select:Primary Color Variation" content="darken-2" title="Darker 2">
+        <meta name="select:Primary Color Variation" content="darken-3" title="Darker 3">
+        <meta name="select:Primary Color Variation" content="darken-4" title="Darker 4">
+        <meta name="select:Primary Color Variation" content="accent-1" title="Accent 1">
+        <meta name="select:Primary Color Variation" content="accent-2" title="Accent 2">
+        <meta name="select:Primary Color Variation" content="accent-3" title="Accent 3">
+        <meta name="select:Primary Color Variation" content="accent-4" title="Accent 4">
+        
+        <style>
+            {CustomCSS}
+        </style>
+    </head>
+
+    <body>
+        <!--<div class="navbar-fixed">-->
+            <nav class="{select:Primary Color} {select:Primary Color Variation}">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="{BlogURL}" class="brand-logo hide-on-small-only"><img src="{PortraitURL-64}" alt="{Title}" class="z-depth-2"></a>
+                        <a href="{BlogURL}" class="brand-logo hide-on-med-and-up"><img src="{PortraitURL-64}" alt="{Title}" height="56px" width="56px" class="z-depth-2"></a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            {block:HasPages}{block:Pages}
+                                <li><a href="{URL}">{Label}</a></li>
+                            {/block:Pages}{/block:HasPages}
+                            {block:AskEnabled}
+                                <li><a href="{BlogURL}ask">{AskLabel}</a></li>
+                            {/block:AskEnabled}
+                            {block:SubmissionsEnabled}
+                                <li><a href="{BlogURL}submit">{SubmitLabel}</a></li>
+                            {/block:SubmissionsEnabled}
+                            <li><a href="{RSS}">RSS</a></li>
+                            <li><a href="{BlogURL}archive">Archive</a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            {block:HasPages}{block:Pages}
+                                <li><a href="{URL}">{Label}</a></li>
+                            {/block:Pages}{/block:HasPages}
+                            {block:AskEnabled}
+                                <li><a href="{BlogURL}ask">{AskLabel}</a></li>
+                            {/block:AskEnabled}
+                            {block:SubmissionsEnabled}
+                                <li><a href="{BlogURL}submit">{SubmitLabel}</a></li>
+                            {/block:SubmissionsEnabled}
+                            <li><a href="{RSS}">Feed</a></li>
+                            <li><a href="{BlogURL}archive">Archive</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>            
+        <!--</div>-->
+
+
+        {block:Posts}
+            
+        {/block:Posts}
+    
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+        <script src="https://raw.githubusercontent.com/compoundfraxure/Materialize-Tumblr/master/main.js"></script>
+    </body>
+</html>
